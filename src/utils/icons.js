@@ -6,14 +6,16 @@ import { IoIosSearch } from "react-icons/io";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { BsThreeDots } from "react-icons/bs";
 import { CiRepeat, CiShuffle } from "react-icons/ci";
-import { BsFillPlayFill, BsFillPauseFill } from "react-icons/bs";
+import { BsFillPlayFill, BsFillPauseFill, BsMusicNoteBeamed, BsDot } from "react-icons/bs";
 const icons = {
     MdOutlineLibraryMusic,
     HiOutlineChartPie,
     TbChartArcs,
     MdOutlineFeed,
+    BsMusicNoteBeamed,
     HiArrowNarrowLeft,
     HiArrowNarrowRight,
+    BsDot,
     IoIosSearch,
     AiFillHeart,
     AiOutlineHeart,

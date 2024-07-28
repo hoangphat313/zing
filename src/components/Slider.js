@@ -2,10 +2,14 @@ import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { getArrSlider } from '../utils/function'
 import * as actions from '../store/actions'
+import { useNavigate } from 'react-router-dom'
+
 const Slider = () => {
 
     const { banner } = useSelector(state => state.app)
     const dispatch = useDispatch()
+    const navigate = useNavigate()
+    //animation banner
     useEffect(() => {
         const sliderEls = document.getElementsByClassName('slider-item ')
         let min = 0
@@ -45,9 +49,16 @@ const Slider = () => {
     }, [])
     //
     const handleClickBanner = (item) => {
+        //music
         if (item?.type === 1) {
             dispatch(actions.setCurSongId(item.encodeId))
             dispatch(actions.play(true))
+        }
+        //album 
+        else if (item?.type === 4) {
+            // lay phan tu truoc dau . (ex: abc.html => abc)
+            const albumPath = item?.link?.split('.')[0]
+            navigate(albumPath)
         }
     }
 
