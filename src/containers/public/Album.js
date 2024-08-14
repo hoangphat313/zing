@@ -24,6 +24,7 @@ const Album = () => {
         }
         fetchDetailPlaylist()
     }, [pid])
+
     if (loading) {
         return (
             <div className="flex justify-center items-center w-full h-full">

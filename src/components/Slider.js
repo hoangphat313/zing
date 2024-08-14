@@ -53,12 +53,15 @@ const Slider = () => {
         if (item?.type === 1) {
             dispatch(actions.setCurSongId(item.encodeId))
             dispatch(actions.play(true))
+            dispatch(actions.playAlbum(false))
         }
         //album 
         else if (item?.type === 4) {
             // lay phan tu truoc dau . (ex: abc.html => abc)
             const albumPath = item?.link?.split('.')[0]
             navigate(albumPath)
+        } else {
+            dispatch(actions.playAlbum(false))
         }
     }
 
